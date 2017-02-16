@@ -3,13 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.dilucaframework.core</groupId>
-		<artifactId>diluca-parent</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<groupId>org.perisoftframework.core</groupId>
+		<artifactId>perisoft-framework</artifactId>
+		<version>1.1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>diluca-core-web</artifactId>
-	<name>diluca-core-web</name>
+	<artifactId>perisoft-core-web</artifactId>
+	<name>perisoft-core-web</name>
 	<packaging>jar</packaging>
 
 	<dependencies>
