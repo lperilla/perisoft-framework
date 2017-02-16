@@ -1,14 +1,14 @@
-package org.dilucaframework.core.data.service;
+package org.perisoftframework.core.data.service;
 
 import java.io.Serializable;
 import java.util.List;
 
-import org.dilucaframework.core.data.repository.BaseRepository;
+import org.perisoftframework.core.data.repository.IBaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
-public class BaseServiceImpl<R extends BaseRepository<T, K>, T, K extends Serializable> implements BaseService<R, T, K> {
+public class BaseService<R extends IBaseRepository<T, K>, T, K extends Serializable> implements IBaseService<R, T, K> {
 
 	@Autowired(required = true)
 	private R repository;

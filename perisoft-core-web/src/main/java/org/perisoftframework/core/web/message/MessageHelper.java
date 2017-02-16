@@ -1,9 +1,7 @@
-package org.dilucaframework.core.web.message;
+package org.perisoftframework.core.web.message;
 
 import org.springframework.ui.Model;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import static org.dilucaframework.core.web.message.Message.MESSAGE_ATTRIBUTE;
 
 public final class MessageHelper {
 
@@ -26,7 +24,7 @@ public final class MessageHelper {
 	}
 
 	private static void addAttribute(RedirectAttributes ra, String message, Message.Type type, Object... args) {
-		ra.addFlashAttribute(MESSAGE_ATTRIBUTE, new Message(message, type, args));
+		ra.addFlashAttribute(Message.MESSAGE_ATTRIBUTE, new Message(message, type, args));
 	}
 
 	public static void addSuccessAttribute(Model model, String message, Object... args) {
@@ -50,10 +48,10 @@ public final class MessageHelper {
 	}
 
 	private static void addAttribute(Model model, String message, Message.Type type) {
-		model.addAttribute(MESSAGE_ATTRIBUTE, new Message(message, type));
+		model.addAttribute(Message.MESSAGE_ATTRIBUTE, new Message(message, type));
 	}
 	
 	private static void addAttribute(Model model, String message, Message.Type type, Object... args) {
-		model.addAttribute(MESSAGE_ATTRIBUTE, new Message(message, type, args));
+		model.addAttribute(Message.MESSAGE_ATTRIBUTE, new Message(message, type, args));
 	}
 }

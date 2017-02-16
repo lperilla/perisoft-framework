@@ -1,4 +1,4 @@
-package org.dilucaframework.core.web.message;
+package org.perisoftframework.core.web.message;
 
 /**
  * A message to be displayed in web context. Depending on the type, different

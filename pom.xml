@@ -14,8 +14,8 @@
 	</parent>
 
 	<modules>
-		<module>perisoft-core-web</module>
 		<module>perisoft-core-data</module>
+		<module>perisoft-core-web</module>
 	</modules>
 
 	<dependencyManagement>
