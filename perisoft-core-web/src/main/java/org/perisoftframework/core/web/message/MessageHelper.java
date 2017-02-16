@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package org.perisoftframework.core.web.message;
 
 import org.springframework.ui.Model;
