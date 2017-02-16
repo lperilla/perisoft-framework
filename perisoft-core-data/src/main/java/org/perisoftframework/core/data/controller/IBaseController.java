@@ -13,6 +13,8 @@ public interface IBaseController<T, B extends IBaseService<R, T, K>, R extends I
 	
 	public List<T> findAll(Model model);
 	
+	public T findById(K id, Model model);
+	
 	public T add(T t, Model model);
 
 	public T edit(T t, Model model);

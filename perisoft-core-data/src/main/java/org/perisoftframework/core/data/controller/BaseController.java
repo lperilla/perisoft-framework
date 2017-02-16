@@ -7,6 +7,7 @@ import org.perisoftframework.core.data.repository.IBaseRepository;
 import org.perisoftframework.core.data.service.IBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +21,11 @@ public class BaseController<T, B extends IBaseService<R, T, K>, R extends IBaseR
 	@RequestMapping
 	public List<T> findAll(Model model) {
 		return this.getBusiness().findAll();
+	}
+
+	@RequestMapping("/id/{id}")
+	public T findById(@PathVariable K id, Model model) {
+		return this.getBusiness().findById(id);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
@@ -36,7 +42,7 @@ public class BaseController<T, B extends IBaseService<R, T, K>, R extends IBaseR
 	public T edit(@RequestBody T t, Model model) {
 		return this.getBusiness().save(t);
 	}
-	
+
 	public B getBusiness() {
 		return business;
 	}
@@ -44,6 +50,5 @@ public class BaseController<T, B extends IBaseService<R, T, K>, R extends IBaseR
 	public void setBusiness(B business) {
 		this.business = business;
 	}
-
 
 }

@@ -21,6 +21,11 @@ public class BaseService<R extends IBaseRepository<T, K>, T, K extends Serializa
 		return this.getRepository().findAll();
 	}
 
+	@Override
+	public T findById(K id) {
+		return this.getRepository().findOne(id);
+	}
+
 	public void delete(K k) {
 		this.getRepository().delete(k);
 	}

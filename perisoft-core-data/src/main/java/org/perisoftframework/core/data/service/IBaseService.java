@@ -13,6 +13,8 @@ public interface IBaseService<R extends IBaseRepository<T, K>, T, K extends Seri
 	
 	public List<T> findAll();
 	
+	public T findById(K id);
+	
 	public void delete(K k);
 
 }
